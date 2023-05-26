@@ -182,11 +182,17 @@ function findProductBySku(sku) {
     });
 }
 
+// pruebas
+
 async function start() {
     const carrito = new Carrito();
-    await carrito.agregarProducto('WE32sds8NJ', 1);
+    await carrito.agregarProducto('WE328NJ', 1);
+    await carrito.agregarProducto('WE328NJ', 1);
+    await carrito.agregarProducto('WE32sds8NJ', 2);
     await carrito.agregarProducto('WE328NJ', 2);
+    await carrito.agregarProducto('FN312PPE', 3);
     await carrito.agregarProducto('OL883YE', 3);
+    await carrito.agregarProducto('OL883YE', 5);
     await carrito.agregarProducto('XX92LKI', 4);
     await carrito.agregarProducto('XX92LsKI', 4);
     carrito.eliminarProducto('OL883YE', 2).then((mensaje) => {
